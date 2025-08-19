@@ -38,13 +38,11 @@ By constructing GCNs from gene expression data of both age groups, we can invest
 1. This does this
 2. it also does this
 3. it also does this
---- 
-*** 
-
-** Cython.py** 
+   
+**Cython.py** 
 1. this does this
 
-** origional python code ** 
+**origional python code ** 
 1. does this
 2. does this does this
 3. 
