@@ -4,15 +4,15 @@ Optimized gene correlation matrix generation from count data
 
 ---
 
-## Lab Objective in Bioinformatics Analysis
+## Bioinformatics Lab Focus
+
+**Overall Objective:**  
 Analyze gene coexpression networks (GCNs) in elderly cells compared to younger cells, with the broader aim of applying these methodologies to cancer research. Similar to aging cells, cancer cells exhibit difficulties in regulating cell division and are increasingly prone to genetic mutations.  
 
 **Bioinformatics significance:**  
 Accurately building and analyzing coexpression networks is essential for identifying key genes, understanding their interactions, and drawing meaningful biological conclusions. This contributes to advancing research within the field of bioinformatics.
 
----
-
-## Network Analysis
+**Network Analysis:**  
 By constructing GCNs from gene expression data of both age groups, we can investigate structural and functional differences between the networks.  
 
 **Features of Networks for Analysis:**  
