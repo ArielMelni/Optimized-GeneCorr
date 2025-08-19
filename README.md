@@ -31,7 +31,7 @@ By constructing GCNs from gene expression data of both age groups, we can invest
 - Node degree  
 - Node harmonic
 
-
+---
 ## Code Description 
 
 **Coexpression.py** 
@@ -42,7 +42,7 @@ By constructing GCNs from gene expression data of both age groups, we can invest
 **Cython.py** 
 1. this does this
 
-**origional python code ** 
+**origional python code** 
 1. does this
 2. does this does this
 3. 
