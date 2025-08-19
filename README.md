@@ -15,7 +15,7 @@ Analyze gene coexpression networks (GCNs) in elderly cells compared to younger c
 3. Compare GCNs and their dynamics from young to aged tissues.  
 
 **Bioinformatics significance:**  
-Accurately building and analyzing coexpression networks is essential for identifying key genes, understanding their interactions, and drawing meaningful biological conclusions. This contributes to advancing research within the field of bioinformatics.
+Accurately building and analyzing coexpression networks is essential for identifying key genes, understanding their interactions, and drawing meaningful biological conclusions. 
 
 **Network Analysis:**  
 By constructing GCNs from gene expression data of both age groups, we can investigate structural and functional differences between the networks.  
