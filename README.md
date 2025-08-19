@@ -35,16 +35,19 @@ By constructing GCNs from gene expression data of both age groups, we can invest
 ## Code Description 
 
 **Coexpression.py** 
-1. This does this
-2. it also does this
-3. it also does this
+- Generates a Coexpression Matrix, which represents the probablility of two genes coexpressed in the same cell.
+- Generates a corresponding Pvals matrix which represennts the statistical significance of the coexpression Matrix's probability. ( This is imperetive in ensurinh that coexpression probabilities are understood, and larger networks are also understood with the proper praportions in mind and understood as they are related to the pvals(
+- Pvals are created through statistical testings, including shuffling the matrix and understanding the coexpression probability for genes that are randommly selected and finding the statistical difference from the mean of the found probabilities to see to what exrtent these probabilities found should be undersood as significant.
+- Includes both starteer codes to run it in python and in cython.
+- Directions to run either one are commented. 
+  
    
 **Cython.py** 
-1. this does this
+- utilizs underlying C programming, and combines it with python to effective combine the larger python code that it is written in with the other coe. so that this couldse results in speed. 
 
 **origional python code** 
-1. does this
-2. does this does this
-3. 
+- includes the full python for loop to create the random coexpression matrix.
+- This loop includes much python overhead and slows the code down incredibly. 
+
 
 
