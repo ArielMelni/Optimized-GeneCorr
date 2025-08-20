@@ -34,8 +34,9 @@ By constructing GCNs from gene expression data of both age groups, we can invest
 ---
 ## Code Description 
 
-**Coexpression.py** 
-  *Outputs* 
+**Coexpression.py**
+
+*Outputs* 
 1. Coexpression Matrix: a representation of the probability of two genes coexpressed in the same cell.
 2. A Corresponding P-vals matrix: an assessment of the statistical significance of the Coexpression Matrix probabilities
 
