@@ -88,9 +88,7 @@ To compare networks, we examine structural and functional properties such as:
 
 ---
 
-### **Original Python Code**  
-- Implements the full Python for-loop for generating random coexpression matrices and pvalues.  
-- Serves as a reference implementation, but contains significant Python overhead, making it slower compared to the optimized Cython version.  
+
 
 ---
 
