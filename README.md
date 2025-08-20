@@ -96,10 +96,10 @@ The performance improvement of the Cython implementation over the pure Python co
 
 Below are screenshots of the runtime tests, with Cython showing an overall 30 second speed optimization:
 
-![Python Runtime](path/to/python_runtime.png)  
+![Python Runtime]( )  
 *Python implementation runtime across multiple runs.*
 
-![Cython Runtime](path/to/cython_runtime.png)  
+![Cython Runtime]()  
 *Cython implementation runtime across multiple runs.*
 
 
