@@ -64,18 +64,13 @@ To compare networks, we examine structural and functional properties such as:
 1. **Coexpression Matrix** – the probability that two genes are coexpressed in the same cell.  
 2. **P-values Matrix** – the statistical significance of the coexpression matrix probabilities.  
 
----
-
-### 📊 Generating and Utilizing P-values  
-
+**Generating and Utilizing P-values**  
 - P-values are computed through permutation-based statistical testing. This involves shuffling the gene matrix and recalculating coexpression probabilities for randomly selected genes.  
 - The probability of two random genes being coexpressed is compared against the observed coexpression probability of two genes found in the same cell.  
 - **P-value generation enables networks to capture statistical significance by correcting for random coexpression, rather than relying solely on raw coexpression probabilities.**
 
----
-
-### **Coexpression.py also includes...**  
-- Code to run **either Cython-based loops** or **pure Python loops** (both available and commented for flexibility).  
+**Additional Features**  
+- Includes code to run **either Cython-based loops** or **pure Python loops**, with both implementations available and commented for flexibility.  
 
 ---
 
@@ -89,6 +84,7 @@ To compare networks, we examine structural and functional properties such as:
 - Serves as a reference implementation, but contains significant Python overhead, making it slower compared to the optimized Cython version.  
 
 ---
+
 
 
 
