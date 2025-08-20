@@ -74,7 +74,7 @@ To compare networks, we examine structural and functional properties such as:
 
 ---
 
-### **Cython.py**  
+### **coexp_Cython.pyx**  
 **Key Features That Make the Cython Code Faster Than Python**
 
 | Feature | Benefit |
@@ -85,6 +85,7 @@ To compare networks, we examine structural and functional properties such as:
 | Streaming mean/variance | Saves memory and avoids storing all permutation matrices |
 | Optimized libraries (`CorALS`) | Fast correlation calculation for high-dimensional data |
 
+- In order to run the code, first compilation is required, which allows for much of the speed optimizations. 
 
 ---
 
