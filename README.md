@@ -75,12 +75,21 @@ To compare networks, we examine structural and functional properties such as:
 ---
 
 ### **Cython.py**  
-- Utilizes underlying C-level optimizations combined with Python to reduce overhead and achieve significant speed improvements in generating coexpression matrices.  
+**Key Features That Make the Cython Code Faster Than Python**
+
+| Feature | Benefit |
+|---------|---------|
+| `cdef` static typing | Converts Python objects/loops to C-level operations |
+| Typed NumPy arrays | Fast, contiguous memory access |
+| Cython loops vs Python loops | Avoids Python interpreter overhead |
+| Streaming mean/variance | Saves memory and avoids storing all permutation matrices |
+| Optimized libraries (`CorALS`) | Fast correlation calculation for high-dimensional data |
+
 
 ---
 
 ### **Original Python Code**  
-- Implements the full Python for-loop for generating random coexpression matrices.  
+- Implements the full Python for-loop for generating random coexpression matrices and pvalues.  
 - Serves as a reference implementation, but contains significant Python overhead, making it slower compared to the optimized Cython version.  
 
 ---
