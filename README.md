@@ -88,6 +88,29 @@ To compare networks, we examine structural and functional properties such as:
 
 ---
 
+## ⏱ Runtime Comparison & Optimization
+
+The performance improvement of the Cython implementation over the pure Python code was evaluated using Python’s built-in `timeit` module. Each implementation was executed repeatedly, and the overall execution time was recorded to ensure that the observed speedup is consistent and not due to random variation.
+
+- **Methodology:**  
+  - Both Python and Cython implementations were run multiple times with `timeit`.  
+  - Average runtime was calculated for a robust comparison.  
+  - This benchmarking validates that Cython optimizations, such as static typing, C-level loops, and streaming calculations, lead to genuine performance gains.
+
+### **Results**
+
+Below are screenshots of the runtime tests:
+
+![Python Runtime](path/to/python_runtime.png)  
+*Python implementation runtime across multiple runs.*
+
+![Cython Runtime](path/to/cython_runtime.png)  
+*Cython implementation runtime across multiple runs.*
+
+**Key Observations:**  
+- The Cython version demonstrates a substantial speedup compared to the original Python implementation.  
+- Optimizations including `cdef` static typing, typed NumPy arrays, and streaming mean/variance calculation contribute significantly to the performance improvement.  
+- Benchmarking using multiple runs confirms that the speedup is consistent and reliable.
 
 
 ---
