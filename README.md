@@ -99,7 +99,7 @@ Below are screenshots of the runtime tests, with Cython showing an overall 30 se
 ![Python Runtime](https://github.com/ArielMelni/Optimized-GeneCorr/blob/main/8C38DD30-33A5-4112-BC58-02A0257EE8B9.jpeg )  
 *Python implementation runtime across multiple runs.*
 
-![Cython Runtime]()  
+![Cython Runtime](https://github.com/ArielMelni/Optimized-GeneCorr/blob/main/44D4B4DF-6195-4957-BF11-4B4944283085.jpeg)  
 *Cython implementation runtime across multiple runs.*
 
 
