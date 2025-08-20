@@ -4,56 +4,91 @@ Optimized gene correlation matrix generation from count data
 
 ---
 
-## Bioinformatics Lab Focus
+## 🔬 Bioinformatics Lab Focus
 
-**Overall Objective:**  
+**Overall Objective**  
 Analyze gene coexpression networks (GCNs) in elderly cells compared to younger cells, with the broader aim of applying these methodologies to cancer research. Similar to aging cells, cancer cells exhibit difficulties in regulating cell division and are increasingly prone to genetic mutations.  
 
-**Methodology:**  
-1. Develop a framework to build and analyze gene co-expression networks in scRNA-seq.  
+**Methodology**  
+1. Develop a framework to build and analyze gene coexpression networks in scRNA-seq.  
 2. Generate a cell-type-specific GCN atlas across young and aged tissues.  
-3. Compare GCNs and their dynamics from young to aged tissues.  
+3. Compare GCNs and their dynamics between young and aged tissues.  
 
-**Bioinformatics significance:**  
-Accurately building and analyzing coexpression networks is essential for identifying key genes, understanding their interactions, and drawing meaningful biological conclusions. 
+**Bioinformatics Significance**  
+Accurately building and analyzing coexpression networks is essential for identifying key genes, understanding their interactions, and drawing meaningful biological conclusions.  
 
-**Network Analysis:**  
-By constructing GCNs from gene expression data of both age groups, we can investigate structural and functional differences between the networks.  
-
-**Features of Networks for Analysis:**  
+**Network Analysis Metrics**  
+To compare networks, we examine structural and functional properties such as:  
 - Graph density  
 - Node expression  
-- Edge co-expression  
-- LCC size + density  
+- Edge coexpression  
+- LCC size and density  
 - Effective number of components  
 - Degree assortativity  
 - Percolation threshold  
-- Node degree  
-- Node harmonic
+- Node degree distribution  
+- Node harmonic centrality  
 
 ---
-## Code Description 
 
-**Coexpression.py**
+## 💻 Code Description
 
-*Outputs* 
-1. Coexpression Matrix: a representation of the probability of two genes coexpressed in the same cell.
-2. A Corresponding P-vals matrix: an assessment of the statistical significance of the Coexpression Matrix probabilities
+### **Coexpression.py**
 
-*Importance of Generating and utilizing P-Values* 
+**Parameters**  
+- **X** (*np.ndarray*)  
+  Gene expression matrix with shape `(cells, genes)`.  
 
-( This is imperetive in ensurinh that coexpression probabilities are understood, and larger networks are also understood with the proper praportions in mind and understood as they are related to the pvals(
-- Pvals are created through statistical testings, including shuffling the matrix and understanding the coexpression probability for genes that are randommly selected and finding the statistical difference from the mean of the found probabilities to see to what exrtent these probabilities found should be undersood as significant.
-- Includes both starteer codes to run it in python and in cython.
-- Directions to run either one are commented. 
-  
-   
-**Cython.py** 
-- utilizs underlying C programming, and combines it with python to effective combine the larger python code that it is written in with the other coe. so that this couldse results in speed. 
+- **correlation_method** (*str*, optional)  
+  Method to compute correlation (e.g., `'pearson'` or `'spearman'`).  
+  Default is from settings.  
 
-**origional python code** 
-- includes the full python for loop to create the random coexpression matrix.
-- This loop includes much python overhead and slows the code down incredibly. 
+- **num_permutations** (*int*, optional)  
+  Number of permutations for the permutation test.  
+  Each permutation results in two correlation matrices.  
+  Default is from settings.  
+
+- **block_size** (*int*, optional)  
+  Block size for in-block shuffling during permutation.  
+  Default is from settings.  
+
+- **sort_by** (*np.ndarray*, optional)  
+  Array to sort cells by, to reduce sequencing depth biases.  
+  Default is `None`.  
+
+- **random_state** (*int*, optional)  
+  Seed for random number generator.  
+  Default is `0`.  
+
+**Outputs**  
+1. **Coexpression Matrix** – the probability that two genes are coexpressed in the same cell.  
+2. **P-values Matrix** – the statistical significance of the coexpression matrix probabilities.  
+
+---
+
+### 📊 Generating and Utilizing P-values  
+
+- P-values are computed through permutation-based statistical testing. This involves shuffling the gene matrix and recalculating coexpression probabilities for randomly selected genes.  
+- The probability of two random genes being coexpressed is compared against the observed coexpression probability of two genes found in the same cell.  
+- **P-value generation enables networks to capture statistical significance by correcting for random coexpression, rather than relying solely on raw coexpression probabilities.**
+
+---
+
+### **Coexpression.py also includes...**  
+- Code to run **either Cython-based loops** or **pure Python loops** (both available and commented for flexibility).  
+
+---
+
+### **Cython.py**  
+- Utilizes underlying C-level optimizations combined with Python to reduce overhead and achieve significant speed improvements in generating coexpression matrices.  
+
+---
+
+### **Original Python Code**  
+- Implements the full Python for-loop for generating random coexpression matrices.  
+- Serves as a reference implementation, but contains significant Python overhead, making it slower compared to the optimized Cython version.  
+
+---
 
 
 
