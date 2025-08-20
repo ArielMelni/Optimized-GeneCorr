@@ -63,33 +63,33 @@ def gene_coexpressions(
     
 
     
-    # Python Implementation StartsHere 
-    streaming_count = 0
-    streaming_mean  = np.zeros(corrs_len, dtype=np.float64)
-    streaming_m2    = np.zeros(corrs_len, dtype=np.float64)
-    for _ in range(num_permutations):
-        x_shuff = inblock_permutation(X, block_size, seed=rng)
-        corr_mat = correlation_matrix(correlation_method, x=X, y=x_shuff)
-        # ask if the squareform is worth it. 
-        corrs = squareform(corr_mat, checks=False)# check that upper is diff than lower diagonal. (false it isnt the same as the lower) 1D array
-        streaming_count += 1
-        delta = corrs - streaming_mean
-        streaming_mean += delta / streaming_count
-        streaming_m2 += delta * (corrs - streaming_mean)
-        # the transpose of the correalation matrix
-        # is another set of permutations
-        corrs = squareform(corr_mat.T, checks=False)
-        streaming_count += 1
-        delta = corrs - streaming_mean
-        streaming_mean += delta / streaming_count
-        streaming_m2 += delta * (corrs - streaming_mean)
-    streaming_std = np.sqrt(streaming_m2 / (streaming_count - 1))# Numpy knows that streaming_count is a number and
-    # True corrs (1d squareformed array)
-    corrs = squareform(
-        correlation_matrix(method=correlation_method, x=X), checks=False
-    )
-    # Measure distances from mean
-    distance = np.abs(corrs - streaming_mean)
+    # # Python Implementation Starts Here 
+    # streaming_count = 0
+    # streaming_mean  = np.zeros(corrs_len, dtype=np.float64)
+    # streaming_m2    = np.zeros(corrs_len, dtype=np.float64)
+    # for _ in range(num_permutations):
+    #     x_shuff = inblock_permutation(X, block_size, seed=rng)
+    #     corr_mat = correlation_matrix(correlation_method, x=X, y=x_shuff)
+    #     # ask if the squareform is worth it. 
+    #     corrs = squareform(corr_mat, checks=False)# check that upper is diff than lower diagonal. (false it isnt the same as the lower) 1D array
+    #     streaming_count += 1
+    #     delta = corrs - streaming_mean
+    #     streaming_mean += delta / streaming_count
+    #     streaming_m2 += delta * (corrs - streaming_mean)
+    #     # the transpose of the correalation matrix
+    #     # is another set of permutations
+    #     corrs = squareform(corr_mat.T, checks=False)
+    #     streaming_count += 1
+    #     delta = corrs - streaming_mean
+    #     streaming_mean += delta / streaming_count
+    #     streaming_m2 += delta * (corrs - streaming_mean)
+    # streaming_std = np.sqrt(streaming_m2 / (streaming_count - 1))# Numpy knows that streaming_count is a number and
+    # # True corrs (1d squareformed array)
+    # corrs = squareform(
+    #     correlation_matrix(method=correlation_method, x=X), checks=False
+    # )
+    # # Measure distances from mean
+    # distance = np.abs(corrs - streaming_mean)
 
 
  
