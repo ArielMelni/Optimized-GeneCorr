@@ -35,7 +35,7 @@ To compare networks, we examine structural and functional properties such as:
 ## My Role...
 
 **The Problem** 
-- The code that creates GCNs is done in Python creating overhead that slows down the creation of GCN's Significantly.
+- The code that creates GCNs is done in Python creating overhead that slows down the creation of GCN's significantly.
 
 **My Objective** 
 - Develop a solution to Python's impaired capacity and optimize the current speed of creating a GCN.
