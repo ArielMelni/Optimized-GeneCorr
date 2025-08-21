@@ -6,8 +6,9 @@ Optimized gene correlation matrix generation from count data
 
 ## 🔬 Bioinformatics Lab Focus
 
-**Overall Objective**  
-Analyze gene coexpression networks (GCNs) in elderly cells compared to younger cells, with the broader aim of applying these methodologies to cancer research. Similar to aging cells, cancer cells exhibit difficulties in regulating cell division and are increasingly prone to genetic mutations.  
+**Abstract**  
+
+Quantifying heterogeneity, the diversity of gene expression patterns across cells, is a critical tool in bioinformatics because it provides insights into the mechanisms underlying genetic change. For instance, older cells show elevated heterogeneity, revealing a declined performance of their cellular processes such as DNA replication and repair. Since cancerous cells exhibit similarly Impaired capacity, this study utilizes aging as a model system for cancer research. Methodologically, this study develops a framework to build single-cell gene coexpression networks (GCNs) from scRNA-seq data. In these networks, genes are represented as nodes and edges between nodes indicate the likelihood of coexpression. Comparing the divergence of network characteristics from the GCNs of young and old cells provide insights into the biological systems that drive genetic alterations during aging. Applying this methodology to analyze single-cell coexpression networks in cancerous cells represents a promising avenue for future research in bioinformatics and cancer biology.
 
 **Methodology**  
 1. Develop a framework to build and analyze gene coexpression networks in scRNA-seq.  
