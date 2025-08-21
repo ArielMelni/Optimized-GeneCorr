@@ -9,6 +9,11 @@ Optimized gene correlation matrix generation from count data
 **Abstract**  
 
 Quantifying heterogeneity, the diversity of gene expression patterns across cells, is a critical tool in bioinformatics because it provides insights into the mechanisms underlying genetic change. For instance, older cells show elevated heterogeneity, revealing a declined performance of their cellular processes such as DNA replication and repair. Since cancerous cells exhibit similarly Impaired capacity, this study utilizes aging as a model system for cancer research. Methodologically, this study develops a framework to build single-cell gene coexpression networks (GCNs) from scRNA-seq data. In these networks, genes are represented as nodes and edges between nodes indicate the likelihood of coexpression. Comparing the divergence of network characteristics from the GCNs of young and old cells provide insights into the biological systems that drive genetic alterations during aging. Applying this methodology to analyze single-cell coexpression networks in cancerous cells represents a promising avenue for future research in bioinformatics and cancer biology.
+**The Problem** 
+- The code that creates GCNs is done in Python creating overhead that slows down the creation of GCN's Significantly.
+
+**My Objective** 
+- Develop a solution to Python's impaired capacity and optimize the current speed of creating a GCN. 
 
 **Methodology**  
 1. Develop a framework to build and analyze gene coexpression networks in scRNA-seq.  
