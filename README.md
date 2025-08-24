@@ -108,11 +108,8 @@ Cython saw a 34 Second Speed optimization:
 
 *Python implementation runtime across multiple runs: **1 min and 57 seconds** *
 
-![Python Runtime](https://github.com/ArielMelni/Optimized-GeneCorr/blob/main/8C38DD30-33A5-4112-BC58-02A0257EE8B9.jpeg )  
 
 *Cython implementation runtime across multiple runs. **1 min and 23 seconds** * 
-
-![Cython Runtime](https://github.com/ArielMelni/Optimized-GeneCorr/blob/main/44D4B4DF-6195-4957-BF11-4B4944283085.jpeg)  
 
 
 
